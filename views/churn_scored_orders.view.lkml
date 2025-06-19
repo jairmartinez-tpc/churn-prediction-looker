@@ -1,11 +1,11 @@
 view: churn_scored_orders {
-  sql_table_name: `test.churn_scored_orders` ;;
+  sql_table_name: `pr-mktg-analyt-prod.test.churn_scored_orders` ;;
   drill_fields: [id]
 
   dimension: id {
     primary_key: yes
     type: string
-    sql: ${TABLE}.id ;;
+    sql: ${TABLE}.order_id ;;
   }
   dimension: predict {
     type: number
