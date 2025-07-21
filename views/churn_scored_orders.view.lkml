@@ -14,10 +14,12 @@ view: churn_scored_orders {
   dimension: probabilidad_de_abandono {
     type: number
     sql: ${TABLE}.Probabilidad_de_abandono ;;
+    value_format: "0.00\%"
   }
   dimension: probabilidad_de_permanencia {
     type: number
     sql: ${TABLE}.Probabilidad_de_permanencia ;;
+    value_format: "0.00\%"
   }
   measure: count {
     type: count

@@ -141,6 +141,7 @@ view: pc_grl_saleattributionmodel_p {
   dimension: order_id {
     type: string
     sql: ${TABLE}.order_id ;;
+    primary_key: yes
   }
   dimension: paid_search_campaign {
     type: string
@@ -229,15 +230,5 @@ view: pc_grl_saleattributionmodel_p {
   dimension: zip_code {
     type: zipcode
     sql: ${TABLE}.zip_code ;;
-  }
-  measure: count {
-    type: count
-    drill_fields: [rateplan_name, room_name]
-  }
-  measure: revenue_sum {
-    type: sum
-    sql: ${attribution_revenue} ;;
-    label: "Revenue"
-    value_format_name: usd
   }
 }
