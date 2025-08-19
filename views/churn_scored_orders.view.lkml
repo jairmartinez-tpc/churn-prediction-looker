@@ -1,5 +1,6 @@
 view: churn_scored_orders {
-  sql_table_name: `pr-mktg-analyt-prod.test.churn_scored_orders` ;;
+  # sql_table_name: `pr-mktg-analyt-prod.test.churn_scored_orders` ;;
+  sql_table_name:`pr-mktg-analyt-prod.test.pc_con_churn-prediction`;;
   drill_fields: [id]
 
   dimension: id {
